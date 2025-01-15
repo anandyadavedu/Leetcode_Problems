@@ -9,44 +9,24 @@ public class L1945SumOfdigit {
         // Transform the integer by replacing it with the sum of its digits.
 
 
-        // String value = "";
-        // for(int i = 0; i < s.length(); i++){
-        //     value = value.concat(String.valueOf(s.charAt(i) - 96).toString());
-        //     System.out.println(value);
-
-        // }
-
-        // while(k != 0){
-
-        //     String sum = value;
-        //     String temp = sum;
-        //     for (int i = 0; i < sum.length(); i++) {
-
-        //         while(sum.length() > 1){
-        //             sum += value.charAt(i);
-
-        //         }
-
-               
-        //     }
-        // }
-
         int sum = 0;
         StringBuilder sb = new StringBuilder();
 
-        // Convert each character in the string `s` to its corresponding alphabet position
         for (char i : s.toCharArray()) {
             int value = i - 'a' + 1;
             sb.append(value);
         }
+        System.out.println(sb);
 
-        // Sum the digits of the resulting string after conversion
         for (char ch : sb.toString().toCharArray()) {
-            sum += ch - '0'; // Add each digit to the sum
+            sum  += ch - '0';
+            System.out.println("Sum of char " +sum);
         }
 
+        // System.out.println(sum);
+
         // Perform the sum of digits operation `k` times
-        while (k-- > 0) {
+        while (k-- > 1) {
             int newSum = 0;
 
             // Sum the digits of `sum`
